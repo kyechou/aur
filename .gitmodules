@@ -1,0 +1,12 @@
+[submodule "shifter"]
+	path = shifter
+	url = https://github.com/kyechou/aur-shifter
+[submodule "shifter-git"]
+	path = shifter-git
+	url = https://github.com/kyechou/aur-shifter-git
+[submodule "shifter-slurm"]
+	path = shifter-slurm
+	url = https://github.com/kyechou/aur-shifter-slurm
+[submodule "shifter-slurm-git"]
+	path = shifter-slurm-git
+	url = https://github.com/kyechou/aur-shifter-slurm-git
