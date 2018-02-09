@@ -13,3 +13,6 @@
 [submodule "opendaylight"]
 	path = opendaylight
 	url = git@github.com:kyechou/aur-opendaylight.git
+[submodule "mininet"]
+	path = mininet
+	url = git@github.com:kyechou/aur-mininet.git
