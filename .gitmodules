@@ -10,3 +10,6 @@
 [submodule "shifter-slurm-git"]
 	path = shifter-slurm-git
 	url = https://github.com/kyechou/aur-shifter-slurm-git
+[submodule "opendaylight"]
+	path = opendaylight
+	url = git@github.com:kyechou/aur-opendaylight.git
