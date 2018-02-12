@@ -16,3 +16,9 @@
 [submodule "mininet"]
 	path = mininet
 	url = git@github.com:kyechou/aur-mininet.git
+[submodule "onos"]
+	path = onos
+	url = git@github.com:kyechou/aur-onos.git
+[submodule "bgpdump"]
+	path = bgpdump
+	url = git@github.com:kyechou/aur-bgpdump.git
