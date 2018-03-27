@@ -1,24 +1,24 @@
 [submodule "shifter"]
 	path = shifter
-	url = https://github.com/kyechou/aur-shifter
+	url = git@github.com:kyechou/aur-shifter.git
 [submodule "shifter-git"]
 	path = shifter-git
-	url = https://github.com/kyechou/aur-shifter-git
+	url = git@github.com:kyechou/aur-shifter-git.git
 [submodule "shifter-slurm"]
 	path = shifter-slurm
-	url = https://github.com/kyechou/aur-shifter-slurm
+	url = git@github.com:kyechou/aur-shifter-slurm.git
 [submodule "shifter-slurm-git"]
 	path = shifter-slurm-git
-	url = https://github.com/kyechou/aur-shifter-slurm-git
-[submodule "opendaylight"]
-	path = opendaylight
-	url = git@github.com:kyechou/aur-opendaylight.git
-[submodule "mininet"]
-	path = mininet
-	url = git@github.com:kyechou/aur-mininet.git
-[submodule "onos"]
-	path = onos
-	url = git@github.com:kyechou/aur-onos.git
+	url = git@github.com:kyechou/aur-shifter-slurm-git.git
 [submodule "bgpdump"]
 	path = bgpdump
 	url = git@github.com:kyechou/aur-bgpdump.git
+[submodule "opendaylight"]
+	path = opendaylight
+	url = git@github.com:kyechou/aur-opendaylight.git
+[submodule "onos"]
+	path = onos
+	url = git@github.com:kyechou/aur-onos.git
+[submodule "mininet-git"]
+	path = mininet-git
+	url = git@github.com:kyechou/aur-mininet-git.git
