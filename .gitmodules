@@ -22,9 +22,6 @@
 [submodule "mininet-git"]
 	path = mininet-git
 	url = git@github.com:kyechou/aur-mininet-git.git
-[submodule "pacleaf"]
-	path = pacleaf
-	url = git@github.com:kyechou/aur-pacleaf.git
 [submodule "yada"]
 	path = yada
 	url = git@github.com:kyechou/aur-yada.git
