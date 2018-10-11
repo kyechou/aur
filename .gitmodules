@@ -25,3 +25,6 @@
 [submodule "yada"]
 	path = yada
 	url = git@github.com:kyechou/aur-yada.git
+[submodule "cpp-coveralls"]
+	path = cpp-coveralls
+	url = git@github.com:kyechou/aur-cpp-coveralls.git
