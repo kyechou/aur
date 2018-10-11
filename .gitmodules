@@ -28,3 +28,6 @@
 [submodule "cpp-coveralls"]
 	path = cpp-coveralls
 	url = git@github.com:kyechou/aur-cpp-coveralls.git
+[submodule "cpp-coveralls-git"]
+	path = cpp-coveralls-git
+	url = git@github.com:kyechou/aur-cpp-coveralls-git.git
