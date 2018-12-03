@@ -31,3 +31,6 @@
 [submodule "cpp-coveralls-git"]
 	path = cpp-coveralls-git
 	url = git@github.com:kyechou/aur-cpp-coveralls-git.git
+[submodule "leagueoflegends-git"]
+	path = leagueoflegends-git
+	url = git@github.com:kyechou/aur-leagueoflegends-git.git
