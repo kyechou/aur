@@ -1,15 +1,3 @@
-[submodule "shifter"]
-	path = shifter
-	url = git@github.com:kyechou/aur-shifter.git
-[submodule "shifter-git"]
-	path = shifter-git
-	url = git@github.com:kyechou/aur-shifter-git.git
-[submodule "shifter-slurm"]
-	path = shifter-slurm
-	url = git@github.com:kyechou/aur-shifter-slurm.git
-[submodule "shifter-slurm-git"]
-	path = shifter-slurm-git
-	url = git@github.com:kyechou/aur-shifter-slurm-git.git
 [submodule "bgpdump"]
 	path = bgpdump
 	url = git@github.com:kyechou/aur-bgpdump.git
