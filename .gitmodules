@@ -16,3 +16,6 @@
 [submodule "leagueoflegends-git"]
 	path = leagueoflegends-git
 	url = git@github.com:kyechou/aur-leagueoflegends-git.git
+[submodule "libnetconf2"]
+	path = libnetconf2
+	url = git@github.com:kyechou/aur-libnetconf2.git
