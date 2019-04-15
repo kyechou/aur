@@ -25,3 +25,6 @@
 [submodule "libredblack"]
 	path = libredblack
 	url = git@github.com:kyechou/aur-libredblack.git
+[submodule "sysrepo"]
+	path = sysrepo
+	url = git@github.com:kyechou/aur-sysrepo.git
