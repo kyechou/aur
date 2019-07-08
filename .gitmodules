@@ -10,9 +10,6 @@
 [submodule "mininet-git"]
 	path = mininet-git
 	url = git@github.com:kyechou/aur-mininet-git.git
-[submodule "yada"]
-	path = yada
-	url = git@github.com:kyechou/aur-yada.git
 [submodule "leagueoflegends-git"]
 	path = leagueoflegends-git
 	url = git@github.com:kyechou/aur-leagueoflegends-git.git
