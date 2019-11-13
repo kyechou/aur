@@ -31,3 +31,6 @@
 [submodule "spin-git"]
 	path = spin-git
 	url = git@github.com:kyechou/aur-spin-git.git
+[submodule "python-pysmt-git"]
+	path = python-pysmt-git
+	url = git@github.com:kyechou/aur-python-pysmt-git.git
