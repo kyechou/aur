@@ -43,3 +43,6 @@
 [submodule "thrift-0.9"]
 	path = thrift-0.9
 	url = git@github.com:kyechou/aur-thrift-0.9.git
+[submodule "clickrouter-git"]
+	path = clickrouter-git
+	url = git@github.com:kyechou/aur-clickrouter-git.git
