@@ -46,3 +46,6 @@
 [submodule "clickrouter-git"]
 	path = clickrouter-git
 	url = git@github.com:kyechou/aur-clickrouter-git.git
+[submodule "intelxed"]
+	path = intelxed
+	url = git@github.com:kyechou/aur-intelxed.git
