@@ -52,3 +52,6 @@
 [submodule "intelxed-git"]
 	path = intelxed-git
 	url = git@github.com:kyechou/aur-intelxed-git.git
+[submodule "remill-git"]
+	path = remill-git
+	url = git@github.com:kyechou/aur-remill-git.git
