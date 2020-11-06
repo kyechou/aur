@@ -55,3 +55,6 @@
 [submodule "remill-git"]
 	path = remill-git
 	url = git@github.com:kyechou/aur-remill-git.git
+[submodule "remill"]
+	path = remill
+	url = git@github.com:kyechou/aur-remill.git
