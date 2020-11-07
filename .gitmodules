@@ -67,3 +67,6 @@
 [submodule "dyninst"]
 	path = dyninst
 	url = git@github.com:kyechou/aur-dyninst.git
+[submodule "dyninst-git"]
+	path = dyninst-git
+	url = git@github.com:kyechou/aur-dyninst-git.git
