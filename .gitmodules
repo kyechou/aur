@@ -73,3 +73,6 @@
 [submodule "mcsema"]
 	path = mcsema
 	url = git@github.com:kyechou/aur-mcsema.git
+[submodule "retdec"]
+	path = retdec
+	url = git@github.com:kyechou/aur-retdec.git
