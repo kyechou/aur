@@ -85,3 +85,6 @@
 [submodule "klee-libc++"]
 	path = klee-libc++
 	url = git@github.com:kyechou/aur-klee-libcxx.git
+[submodule "gllvm-git"]
+	path = gllvm-git
+	url = git@github.com:kyechou/aur-gllvm-git.git
