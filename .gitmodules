@@ -79,3 +79,6 @@
 [submodule "retdec-git"]
 	path = retdec-git
 	url = git@github.com:kyechou/aur-retdec-git.git
+[submodule "wllvm-git"]
+	path = wllvm-git
+	url = git@github.com:kyechou/aur-wllvm-git.git
