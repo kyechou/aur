@@ -10,9 +10,6 @@
 [submodule "leagueoflegends-git"]
 	path = leagueoflegends-git
 	url = git@github.com:kyechou/aur-leagueoflegends-git.git
-[submodule "netopeer2"]
-	path = netopeer2
-	url = git@github.com:kyechou/aur-netopeer2.git
 [submodule "libredblack"]
 	path = libredblack
 	url = git@github.com:kyechou/aur-libredblack.git
