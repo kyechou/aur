@@ -37,9 +37,6 @@
 [submodule "python-laspy"]
 	path = python-laspy
 	url = git@github.com:kyechou/aur-python-laspy.git
-[submodule "protobuf25"]
-	path = protobuf25
-	url = git@github.com:kyechou/aur-protobuf25.git
 [submodule "clickrouter-git"]
 	path = clickrouter-git
 	url = git@github.com:kyechou/aur-clickrouter-git.git
