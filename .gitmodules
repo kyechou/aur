@@ -19,9 +19,6 @@
 [submodule "libredblack"]
 	path = libredblack
 	url = git@github.com:kyechou/aur-libredblack.git
-[submodule "sysrepo"]
-	path = sysrepo
-	url = git@github.com:kyechou/aur-sysrepo.git
 [submodule "divine2-ltsmin"]
 	path = divine2-ltsmin
 	url = git@github.com:kyechou/aur-divine2-ltsmin.git
