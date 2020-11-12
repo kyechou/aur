@@ -1,9 +1,6 @@
 [submodule "bgpdump"]
 	path = bgpdump
 	url = git@github.com:kyechou/aur-bgpdump.git
-[submodule "opendaylight"]
-	path = opendaylight
-	url = git@github.com:kyechou/aur-opendaylight.git
 [submodule "onos"]
 	path = onos
 	url = git@github.com:kyechou/aur-onos.git
