@@ -34,9 +34,6 @@
 [submodule "python-pysmt-git"]
 	path = python-pysmt-git
 	url = git@github.com:kyechou/aur-python-pysmt-git.git
-[submodule "python-laspy"]
-	path = python-laspy
-	url = git@github.com:kyechou/aur-python-laspy.git
 [submodule "clickrouter-git"]
 	path = clickrouter-git
 	url = git@github.com:kyechou/aur-clickrouter-git.git
