@@ -61,3 +61,6 @@
 [submodule "gllvm-git"]
 	path = gllvm-git
 	url = git@github.com:kyechou/aur-gllvm-git.git
+[submodule "cxx-common"]
+	path = cxx-common
+	url = git@github.com:kyechou/aur-cxx-common.git
