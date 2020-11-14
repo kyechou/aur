@@ -37,12 +37,6 @@
 [submodule "python-ccsyspath"]
 	path = python-ccsyspath
 	url = git@github.com:kyechou/aur-python-ccsyspath.git
-[submodule "dyninst"]
-	path = dyninst
-	url = git@github.com:kyechou/aur-dyninst.git
-[submodule "dyninst-git"]
-	path = dyninst-git
-	url = git@github.com:kyechou/aur-dyninst-git.git
 [submodule "mcsema"]
 	path = mcsema
 	url = git@github.com:kyechou/aur-mcsema.git
