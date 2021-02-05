@@ -55,3 +55,6 @@
 [submodule "vcpkg-git"]
 	path = vcpkg-git
 	url = git@github.com:kyechou/aur-vcpkg-git.git
+[submodule "mininet"]
+	path = mininet
+	url = git@github.com:kyechou/aur-mininet.git
