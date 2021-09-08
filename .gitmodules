@@ -58,3 +58,6 @@
 [submodule "mininet"]
 	path = mininet
 	url = git@github.com:kyechou/aur-mininet.git
+[submodule "python-pypcap"]
+	path = python-pypcap
+	url = git@github.com:kyechou/aur-python-pypcap.git
