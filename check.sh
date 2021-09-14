@@ -43,7 +43,9 @@ if [ -n "${pkgdiff[*]}" ]; then
     echo "${pkgdiff}" | sed -e 's/^/    /'
 fi
 
-for package in ${packages[@]}; do
+checkPkg() {
+    package="$1"
+
     pushd "$package" >/dev/null
 
     #
@@ -89,7 +91,10 @@ for package in ${packages[@]}; do
         echo "[-] $package does not have PKGBUILD"
     else
         # check if sources are up to date
-        GITHUB_ATOM=1 aur-out-of-date -pkg $package | sed '/\[UP-TO-DATE\]/d'
+        GITHUB_ATOM=1 aur-out-of-date -pkg $package \
+            | sed '/\[UP-TO-DATE\]/d' \
+            | sed '/\[UNKNOWN\] .* No \(GitHub \)\?release found/d' \
+            | sed '/\[UNKNOWN\] .* upstream version is/d'
     fi
 
     #
@@ -99,11 +104,17 @@ for package in ${packages[@]}; do
         echo "[-] $package does not have .SRCINFO"
     elif [ -f "PKGBUILD" ]; then
         # check if .SRCINFO matches PKGBUILD
-        if ! diff <(makepkg --printsrcinfo) .SRCINFO >/dev/null 2>&1; then
+        if ! diff <(makepkg --printsrcinfo) .SRCINFO -B &>/dev/null; then
             echo "[-] $package: .SRCINFO does not match PKGBUILD"
         fi
     fi
 
     popd >/dev/null
-done
+}
 
+for package in ${packages[@]}; do
+    checkPkg "$package" &
+done
+wait
+
+# vim: set ts=4 sw=4 et:
