@@ -61,3 +61,6 @@
 [submodule "python-pypcap"]
 	path = python-pypcap
 	url = git@github.com:kyechou/aur-python-pypcap.git
+[submodule "onos"]
+	path = onos
+	url = git@github.com:kyechou/aur-onos.git
