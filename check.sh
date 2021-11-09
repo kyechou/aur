@@ -19,8 +19,6 @@ for cmd in ${script_depends[@]}; do
     fi
 done
 
-#git submodule update --init
-
 packages=$(ls -d */ | sed 's,/$,,' | sort)
 aur_pkgs=$(curl -L 'https://aur.archlinux.org/rpc/?v=5&type=search&by=maintainer&arg=kyechou' 2>/dev/null | jq '.results[].Name' | sed -e 's/^"//' -e 's/"$//' | sort)
 gh_pkgs=$(curl -L 'https://api.github.com/users/kyechou/repos' 2>/dev/null | jq '.[].name' | grep 'aur-' | sed -e 's/^"aur-//' -e 's/"$//' | sort)
@@ -112,9 +110,19 @@ checkPkg() {
     popd >/dev/null
 }
 
-for package in ${packages[@]}; do
-    checkPkg "$package" &
-done
-wait
+main() {
+    if [ $# -eq 0 ]; then
+        for package in ${packages[@]}; do
+            checkPkg "$package" &
+        done
+    else
+        for package in $@; do
+            checkPkg "$package" &
+        done
+    fi
+    wait
+}
+
+main $@
 
 # vim: set ts=4 sw=4 et:
