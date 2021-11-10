@@ -67,3 +67,6 @@
 [submodule "python-cxxfilt-git"]
 	path = python-cxxfilt-git
 	url = git@github.com:kyechou/aur-python-cxxfilt-git.git
+[submodule "ns3"]
+	path = ns3
+	url = git@github.com:kyechou/aur-ns3.git
