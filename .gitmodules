@@ -73,3 +73,6 @@
 [submodule "wine-ge-lol"]
 	path = wine-ge-lol
 	url = git@github.com:kyechou/aur-wine-ge-lol.git
+[submodule "containernet-git"]
+	path = containernet-git
+	url = git@github.com:kyechou/aur-containernet-git.git
