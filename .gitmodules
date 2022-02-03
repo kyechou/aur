@@ -76,3 +76,6 @@
 [submodule "containernet-git"]
 	path = containernet-git
 	url = git@github.com:kyechou/aur-containernet-git.git
+[submodule "python-iptables-git"]
+	path = python-iptables-git
+	url = git@github.com:kyechou/aur-python-iptables-git.git
