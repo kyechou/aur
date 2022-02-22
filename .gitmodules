@@ -79,3 +79,6 @@
 [submodule "python-iptables-git"]
 	path = python-iptables-git
 	url = git@github.com:kyechou/aur-python-iptables-git.git
+[submodule "python-pypacker"]
+	path = python-pypacker
+	url = git@github.com:kyechou/aur-python-pypacker.git
