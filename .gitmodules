@@ -82,3 +82,9 @@
 [submodule "python-pypacker"]
 	path = python-pypacker
 	url = git@github.com:kyechou/aur-python-pypacker.git
+[submodule "everforest-gtk-theme-git"]
+	path = everforest-gtk-theme-git
+	url = git@github.com:kyechou/aur-everforest-gtk-theme-git.git
+[submodule "kanagawa-gtk-theme-git"]
+	path = kanagawa-gtk-theme-git
+	url = git@github.com:kyechou/aur-kanagawa-gtk-theme-git.git
