@@ -70,9 +70,6 @@
 [submodule "ns3"]
 	path = ns3
 	url = git@github.com:kyechou/aur-ns3.git
-[submodule "wine-ge-lol"]
-	path = wine-ge-lol
-	url = git@github.com:kyechou/aur-wine-ge-lol.git
 [submodule "containernet-git"]
 	path = containernet-git
 	url = git@github.com:kyechou/aur-containernet-git.git
