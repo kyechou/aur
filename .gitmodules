@@ -85,3 +85,6 @@
 [submodule "kanagawa-gtk-theme-git"]
 	path = kanagawa-gtk-theme-git
 	url = git@github.com:kyechou/aur-kanagawa-gtk-theme-git.git
+[submodule "ydotool-git"]
+	path = ydotool-git
+	url = git@github.com:kyechou/aur-ydotool-git.git
