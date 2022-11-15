@@ -88,3 +88,6 @@
 [submodule "ydotool-git"]
 	path = ydotool-git
 	url = git@github.com:kyechou/aur-ydotool-git.git
+[submodule "cage-git"]
+	path = cage-git
+	url = git@github.com:kyechou/aur-cage-git.git
