@@ -91,3 +91,6 @@
 [submodule "cage-git"]
 	path = cage-git
 	url = git@github.com:kyechou/aur-cage-git.git
+[submodule "wlroots-nvidia-git"]
+	path = wlroots-nvidia-git
+	url = git@github.com:kyechou/aur-wlroots-nvidia-git.git
