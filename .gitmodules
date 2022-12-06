@@ -61,9 +61,6 @@
 [submodule "python-pypcap"]
 	path = python-pypcap
 	url = git@github.com:kyechou/aur-python-pypcap.git
-[submodule "onos"]
-	path = onos
-	url = git@github.com:kyechou/aur-onos.git
 [submodule "python-cxxfilt-git"]
 	path = python-cxxfilt-git
 	url = git@github.com:kyechou/aur-python-cxxfilt-git.git
