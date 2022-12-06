@@ -13,33 +13,39 @@ fi
 # check dependency
 script_depends=(git curl jq aur-out-of-date)
 for cmd in ${script_depends[@]}; do
-    if ! type $cmd >/dev/null 2>&1; then
+    if ! type $cmd &>/dev/null; then
         echo "[!] $cmd not installed" >&2
         exit 1
     fi
 done
 
-packages=$(ls -d */ | sed 's,/$,,' | sort -u)
-aur_pkgs=$(curl -L 'https://aur.archlinux.org/rpc/?v=5&type=search&by=maintainer&arg=kyechou' 2>/dev/null | jq '.results[].PackageBase' | sed -e 's/^"//' -e 's/"$//' | sort -u)
-gh_pkgs=$(curl -L 'https://api.github.com/users/kyechou/repos' 2>/dev/null | jq '.[].name' | grep 'aur-' | sed -e 's/^"aur-//' -e 's/"$//' | sort -u)
+local_pkgs=()
+aur_pkgs=()
+gh_pkgs=()
 
-countArgs() {
-    echo $#
+collect_pkgs() {
+    AUR_URL='https://aur.archlinux.org/rpc/?v=5&type=search&by=maintainer&arg=kyechou'
+    GH_URL='https://api.github.com/users/kyechou/repos'
+
+    local_pkgs+=($(ls -d */ | sed 's,/,,g' | sort -u))
+    aur_pkgs+=($(curl -L "$AUR_URL" 2>/dev/null \
+                | jq '.results[].PackageBase' \
+                | sed -e 's/^"//' -e 's/"$//' \
+                | sort -u))
+    pageNo=1
+    while :; do
+        new_pkgs=($(curl -L "$GH_URL?page=$pageNo" 2>/dev/null \
+                    | jq '.[].name' \
+                    | grep 'aur-' \
+                    | sed -e 's/^"aur-//' -e 's/"$//' \
+                    | sort -u))
+        if [ "${#new_pkgs[@]}" -eq 0 ]; then
+            break
+        fi
+        gh_pkgs+=("${new_pkgs[@]}")
+        pageNo=$((pageNo + 1))
+    done
 }
-
-# check local and AUR packages consistency
-pkgdiff=$(diff <(printf "%s\n" "${packages[@]}") <(printf "%s\n" "${aur_pkgs[@]}"))
-if [ -n "${pkgdiff[*]}" ]; then
-    echo "[-] local and AUR package list mismatch: $(countArgs ${packages[@]}) vs $(countArgs ${aur_pkgs[@]})"
-    echo "${pkgdiff}" | sed -e 's/^/    /'
-fi
-
-# check local and GitHub packages consistency
-pkgdiff=$(diff <(printf "%s\n" "${packages[@]}") <(printf "%s\n" "${gh_pkgs[@]}"))
-if [ -n "${pkgdiff[*]}" ]; then
-    echo "[-] local and GitHub package list mismatch: $(countArgs ${packages[@]}) vs $(countArgs ${gh_pkgs[@]})"
-    echo "${pkgdiff}" | sed -e 's/^/    /'
-fi
 
 checkPkg() {
     package="$1"
@@ -111,18 +117,32 @@ checkPkg() {
 }
 
 main() {
-    if [ $# -eq 0 ]; then
-        for package in ${packages[@]}; do
-            checkPkg "$package" &
-        done
-    else
-        for package in $@; do
-            checkPkg "$package" &
-        done
+    # collect package lists from the local FS, AUR, and GitHub
+    collect_pkgs
+
+    # check local and AUR packages consistency
+    pkgdiff=$(diff <(printf "%s\n" "${local_pkgs[@]}") <(printf "%s\n" "${aur_pkgs[@]}"))
+    if [ -n "${pkgdiff[*]}" ]; then
+        echo "[-] local and AUR package list mismatch: ${#local_pkgs[@]} vs ${#aur_pkgs[@]}"
+        echo "${pkgdiff}" | sed -e 's/^/    /'
+        exit 1
     fi
+
+    # check local and GitHub packages consistency
+    pkgdiff=$(diff <(printf "%s\n" "${local_pkgs[@]}") <(printf "%s\n" "${gh_pkgs[@]}"))
+    if [ -n "${pkgdiff[*]}" ]; then
+        echo "[-] local and GitHub package list mismatch: ${#local_pkgs[@]} vs ${#gh_pkgs[@]}"
+        echo "${pkgdiff}" | sed -e 's/^/    /'
+        exit 1
+    fi
+
+    for package in ${local_pkgs[@]}; do
+        checkPkg "$package" &
+    done
     wait
 }
 
-main $@
+
+main
 
 # vim: set ts=4 sw=4 et:
