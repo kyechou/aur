@@ -94,3 +94,6 @@
 [submodule "wine-lol-staging"]
 	path = wine-lol-staging
 	url = git@github.com:kyechou/aur-wine-lol-staging.git
+[submodule "mbuild"]
+	path = mbuild
+	url = git@github.com:kyechou/aur-mbuild.git
