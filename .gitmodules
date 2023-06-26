@@ -25,9 +25,6 @@
 [submodule "intelxed-git"]
 	path = intelxed-git
 	url = git@github.com:kyechou/aur-intelxed-git.git
-[submodule "remill"]
-	path = remill
-	url = git@github.com:kyechou/aur-remill.git
 [submodule "python-ccsyspath"]
 	path = python-ccsyspath
 	url = git@github.com:kyechou/aur-python-ccsyspath.git
