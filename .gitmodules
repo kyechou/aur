@@ -37,9 +37,6 @@
 [submodule "gllvm-git"]
 	path = gllvm-git
 	url = git@github.com:kyechou/aur-gllvm-git.git
-[submodule "cxx-common"]
-	path = cxx-common
-	url = git@github.com:kyechou/aur-cxx-common.git
 [submodule "vcpkg-git"]
 	path = vcpkg-git
 	url = git@github.com:kyechou/aur-vcpkg-git.git
