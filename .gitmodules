@@ -31,9 +31,6 @@
 [submodule "remill"]
 	path = remill
 	url = git@github.com:kyechou/aur-remill.git
-[submodule "anvill"]
-	path = anvill
-	url = git@github.com:kyechou/aur-anvill.git
 [submodule "python-ccsyspath"]
 	path = python-ccsyspath
 	url = git@github.com:kyechou/aur-python-ccsyspath.git
