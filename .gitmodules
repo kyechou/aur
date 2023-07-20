@@ -82,3 +82,6 @@
 [submodule "mbuild"]
 	path = mbuild
 	url = git@github.com:kyechou/aur-mbuild.git
+[submodule "hyprland-nvidia-git"]
+	path = hyprland-nvidia-git
+	url = git@github.com:kyechou/aur-hyprland-nvidia-git.git
