@@ -85,3 +85,6 @@
 [submodule "hyprland-nvidia-git"]
 	path = hyprland-nvidia-git
 	url = git@github.com:kyechou/aur-hyprland-nvidia-git.git
+[submodule "dotool-git"]
+	path = dotool-git
+	url = git@github.com:kyechou/aur-dotool-git.git
