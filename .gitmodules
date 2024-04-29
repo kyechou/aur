@@ -4,9 +4,6 @@
 [submodule "mininet-git"]
 	path = mininet-git
 	url = git@github.com:kyechou/aur-mininet-git.git
-[submodule "leagueoflegends-git"]
-	path = leagueoflegends-git
-	url = git@github.com:kyechou/aur-leagueoflegends-git.git
 [submodule "libredblack"]
 	path = libredblack
 	url = git@github.com:kyechou/aur-libredblack.git
