@@ -85,3 +85,6 @@
 [submodule "gargoyle-git"]
 	path = gargoyle-git
 	url = git@github.com:kyechou/aur-gargoyle-git.git
+[submodule "gruvbox-theme-git"]
+	path = gruvbox-theme-git
+	url = git@github.com:kyechou/aur-gruvbox-theme-git.git
