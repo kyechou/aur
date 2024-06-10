@@ -82,3 +82,6 @@
 [submodule "dotool-git"]
 	path = dotool-git
 	url = git@github.com:kyechou/aur-dotool-git.git
+[submodule "gargoyle-git"]
+	path = gargoyle-git
+	url = git@github.com:kyechou/aur-gargoyle-git.git
