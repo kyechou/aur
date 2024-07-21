@@ -88,3 +88,6 @@
 [submodule "openhue-cli"]
 	path = openhue-cli
 	url = git@github.com:kyechou/aur-openhue-cli.git
+[submodule "tron"]
+	path = tron
+	url = git@github.com:kyechou/aur-tron.git
