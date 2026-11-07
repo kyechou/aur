@@ -13,12 +13,6 @@
 [submodule "python-pysmt-git"]
 	path = python-pysmt-git
 	url = git@github.com:kyechou/aur-python-pysmt-git.git
-[submodule "intelxed"]
-	path = intelxed
-	url = git@github.com:kyechou/aur-intelxed.git
-[submodule "intelxed-git"]
-	path = intelxed-git
-	url = git@github.com:kyechou/aur-intelxed-git.git
 [submodule "python-ccsyspath"]
 	path = python-ccsyspath
 	url = git@github.com:kyechou/aur-python-ccsyspath.git
@@ -43,9 +37,6 @@
 [submodule "python-cxxfilt-git"]
 	path = python-cxxfilt-git
 	url = git@github.com:kyechou/aur-python-cxxfilt-git.git
-[submodule "ns3"]
-	path = ns3
-	url = git@github.com:kyechou/aur-ns3.git
 [submodule "containernet-git"]
 	path = containernet-git
 	url = git@github.com:kyechou/aur-containernet-git.git
@@ -67,12 +58,6 @@
 [submodule "cage-git"]
 	path = cage-git
 	url = git@github.com:kyechou/aur-cage-git.git
-[submodule "wine-lol-staging"]
-	path = wine-lol-staging
-	url = git@github.com:kyechou/aur-wine-lol-staging.git
-[submodule "mbuild"]
-	path = mbuild
-	url = git@github.com:kyechou/aur-mbuild.git
 [submodule "dotool-git"]
 	path = dotool-git
 	url = git@github.com:kyechou/aur-dotool-git.git
