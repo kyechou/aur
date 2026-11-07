@@ -38,10 +38,14 @@ Repository-wide health check, run from the root:
 ./check.sh
 ```
 
-`check.sh` needs `git`, `curl`, `jq`, and `aur-out-of-date` (not installed by default). It
-verifies that the local directory list matches the AUR maintainer/co-maintainer list and
-the `aur-*` GitHub repos, then checks each package in parallel for remote/branch
-consistency, dirty trees, upstream version staleness, and `.SRCINFO` drift.
+`check.sh` is strictly read-only and never fetches, writes, or removes anything. It needs
+`git`, `curl`, `jq`, `makepkg`, `vercmp`, and `nvchecker`. It compares the local directory
+list against `.gitmodules`, `.git/modules`, the AUR maintainer/co-maintainer list, and the
+`aur-*` GitHub repos; checks each package's remote URLs and branch layout, sync with both
+remotes via `git ls-remote`, dirty trees, and `.SRCINFO` drift; validates `nvchecker.toml`
+itself (one entry per non-`-git` package, none for VCS or removed packages, each pointing
+at the same upstream as the package's `.SRCINFO` url or sources); then compares every
+non-`-git` package's `pkgver` against upstream. Exit status is 1 if anything was reported.
 
 ## Workflow for updating a package
 
@@ -56,9 +60,11 @@ consistency, dirty trees, upstream version staleness, and `.SRCINFO` drift.
 
 - **Add**: create the `aur-<pkg>` repo on GitHub, then from the root
   `git submodule add git@github.com:kyechou/aur-<pkg>.git <pkg>`, and inside it
-  `git remote add aur ssh://aur@aur.archlinux.org/<pkg>.git`.
-- **Remove**: `git submodule deinit <pkg> && git rm <pkg>`, and confirm the entry is gone
-  from `.gitmodules` (a stale `hyprland-nvidia-git` entry shows this step has been missed before).
+  `git remote add aur ssh://aur@aur.archlinux.org/<pkg>.git`. A non-`-git` package also
+  needs an entry in `nvchecker.toml`, or `check.sh` will flag it.
+- **Remove**: `git submodule deinit -f <pkg> && git rm -f <pkg>`, then
+  `rm -rf .git/modules/<pkg>`, which git leaves behind. `check.sh` reports stale
+  `.gitmodules` entries and orphaned `.git/modules` directories.
 
 ## PKGBUILD conventions
 

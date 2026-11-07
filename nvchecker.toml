@@ -1,0 +1,48 @@
+# Upstream version sources for the non-VCS packages in this repository.
+# check.sh runs this through nvchecker and compares against each pkgver.
+# VCS (-git) packages track upstream HEAD and are intentionally not listed.
+#
+# Run by hand:  nvchecker -c nvchecker.toml
+
+[bgpdump]
+source = "git"
+git = "https://github.com/RIPE-NCC/bgpdump.git"
+prefix = "v"
+
+[libredblack]
+source = "regex"
+url = "https://sourceforge.net/projects/libredblack/rss?path=/libredblack"
+regex = 'libredblack-([\d.]+)\.tar\.gz'
+
+[mininet]
+source = "git"
+git = "https://github.com/mininet/mininet.git"
+include_regex = '\d+\.\d+\.\d+(b\d+)?'
+
+[openhue-cli]
+source = "git"
+git = "https://github.com/openhue/openhue-cli.git"
+
+[python-ccsyspath]
+source = "pypi"
+pypi = "ccsyspath"
+
+[python-pypacker]
+source = "git"
+git = "https://gitlab.com/mike01/pypacker.git"
+prefix = "v"
+
+[python-pypcap]
+source = "git"
+git = "https://github.com/pynetwork/pypcap.git"
+prefix = "v"
+
+[retdec]
+source = "git"
+git = "https://github.com/avast/retdec.git"
+prefix = "v"
+
+[tron]
+source = "git"
+git = "https://github.com/tessro/tron.git"
+prefix = "v"
